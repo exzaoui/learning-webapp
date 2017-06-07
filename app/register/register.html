@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+</head>
+<body ng-controller="RegisterCtrl">
+<div class="container">
+    <div class="jumbotron col-md-6 col-md-offset-3" style="padding-top: O; padding-bottom:  0;">
+        <h2>WebApp Registration Page</h2>
+    </div>
+    <form role="form" name="RegForm" novalidate="">
+        <div class="form-group col-md-6 col-md-offset-3" ng-class="{'has-error': RegForm.email.$invalid && RegForm.email.$touched}">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" ng-model="user.email" class="form-control" placeholder="Email Address" id="email" required>
+            <small class="help-block" ng-show="RegForm.email.$invalid && RegForm.email.$touched">Please enter an Email Address</small>
+        </div>
+        <div class="form-group col-md-6 col-md-offset-3" ng-class="{'has-error': RegForm.password.$invalid && RegForm.password.$touched}">
+            <label for="password">Password</label>
+            <input type="password" name="password" ng-minlength="8" ng-model="user.password" class="form-control" placeholder="Password" id="password" required>
+            <small class="help-block" ng-show="RegForm.password.$error.minlength && RegForm.password.$touched">Password must be at least 8 caracters</small>
+        </div>
+        <div class="checkbox col-md-6 col-md-offset-3">
+            <label><a href="#/home">Sign In</a></label>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <p ng-show="errMsg" style="color:red;">{{errorMessage}}</p>
+            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="RegForm.email.$invalid" ng-click="signUp()">Sign Up</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

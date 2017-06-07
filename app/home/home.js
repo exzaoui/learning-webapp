@@ -17,6 +17,7 @@ angular.module('webapp.home', ['ngRoute', 'firebase'])
 
         auth.$signInWithEmailAndPassword(username,password).then(function(){
             console.log('User login Successful');
+            $scope.errMsg = false;
         }).catch(function(error){
             $scope.errMsg = true;
             $scope.errorMessage = error.message;
