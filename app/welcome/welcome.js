@@ -1,3 +1,14 @@
-/**
- * Created by Wail Skanderi on 08/06/2017.
- */
+'use strict';
+
+angular.module('webapp.welcome', ['ngRoute', 'firebase'])
+
+    .config(['$routeProvider', function($routeProvider){
+        $routeProvider.when('/welcome',{
+            templateUrl: 'welcome/welcome.html',
+            controller: 'WelcomeCtrl'
+        });
+    }])
+
+.controller('WelcomeCtrl', ['$scope', function($scope){
+
+}])

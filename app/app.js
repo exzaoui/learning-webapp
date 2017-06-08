@@ -4,7 +4,8 @@
 angular.module('webapp', [
   'ngRoute',
     'webapp.home',
-    'webapp.register'
+    'webapp.register',
+    'webapp.welcome'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 
