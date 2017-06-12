@@ -9,7 +9,7 @@ angular.module('webapp.register', ['ngRoute', 'firebase'])
         });
     }])
 
-    .controller('RegisterCtrl', ['$scope', '$firebaseAuth', function($scope, $firebaseAuth){
+    .controller('RegisterCtrl', ['$scope', '$firebaseAuth', '$location', function($scope, $firebaseAuth, $location){
 
         $scope.signUp = function(){
             var username = $scope.user.email;
@@ -19,6 +19,7 @@ angular.module('webapp.register', ['ngRoute', 'firebase'])
                 var auth = $firebaseAuth();
                 auth.$createUserWithEmailAndPassword(username, password).then(function(){
                     console.log('User Successfully Created');
+                    $location.path('/home');
                 }).catch(function(error){
                     $scope.errMsg = true;
                     $scope.errorMessage = error.message;

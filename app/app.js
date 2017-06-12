@@ -5,7 +5,8 @@ angular.module('webapp', [
   'ngRoute',
     'webapp.home',
     'webapp.register',
-    'webapp.welcome'
+    'webapp.welcome',
+    'webapp.addPost'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 

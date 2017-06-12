@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Post Page</title>
+</head>
+<body ng-controller="AddPostCtrl">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">WebApp</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="#">Add Post</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container" ng-show="success">
+    <div class="row">
+        <div class="alert alert-success">
+            <strong>Success!</strong> The post has been added
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <form role="form" name="postForm" ng-submit="createPost()" novalidate="">
+        <legend>Create Post</legend>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group"
+                     ng-class="{'has-error': postForm.titleTxt.$invalid && postForm.titleTxt.$touched}">
+                    <label for="title">Title</label>
+                    <input type="text" name="titleTxt" id="title" class="form-control" placeholder="Title"
+                           ng-model="article.titleTxt" required ng-minlength="5">
+                    <small class="help-block"
+                           ng-show="postForm.titleTxt.$error.minlength  && postForm.titleTxt.$touched">Please enter a
+                        valid title
+                    </small>
+                </div>
+                <div class="form-group"
+                     ng-class="{'has-error': postForm.postTxt.$invalid && postForm.postTxt.$touched}">
+                    <label for="postTxt">Title</label>
+                    <textarea name="postTxt" id="postTxt" class="form-control" placeholder="Text" ng-minlength="20"
+                              required ng-model="article.postTxt"></textarea>
+                    <small class="help-block" ng-show="postForm.postTxt.$error.minlength  && postForm.postTxt.$touched">
+                        Please enter a valid Post
+                    </small>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block" ng-disabled="postForm.$invalid">Add Post
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>
