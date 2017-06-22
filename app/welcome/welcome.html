@@ -1,91 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
 <head>
-    <meta charset="UTF-8">
-    <title>WebApp Home Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Wail Skanderi</title>
+
 </head>
-<body ng-controller="WelcomeCtrl">
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="#" class="navbar-brand">WebApp</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#/addPost">Add Post</a></li>
-                <li ng-click="logout()"><a href="#">Logout</a></li>
+<body class="rtl home blog" ng-controller="WelcomeCtrl">
+<div id="fly-wrap">
+  <div class="fly-menu-close">
+    <button class="menu-toggle" title="القائمة">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="fly-wrap-out">
+    <div class="fly-side-wrap">
+      <div class="fly-bottom-soc">
+        <div id="mobile-social-icons">
+          <a href="#" target="_blank" class="fa fa-facebook"></a>
+          <a href="#" target="_blank" class="fa fa-twitter"></a>
+          <a href="#" target="_blank" class="fa fa-google-plus"></a>
+          <a href="#" target="_blank" class="fa fa-instagram"></a>
+          <a href="#" target="_blank" class="fa fa-pinterest"></a>
+          <a href="#" target="_blank" class="fa fa-youtube"></a>
+        </div>
+      </div>
+    </div>
+    <div class="fly-wrap-in">
+      <div id="fly-menu-wrap">
+        <nav class="fly-nav-menu left relative">
+          <div class="menu-%d8%a7%d9%84%d8%b1%d8%a6%d9%8a%d8%b3%d9%8a%d8%a9-container">
+            <ul id="primary-menu" class="menu">
+              <li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="#">مميزات القالب</a></li>
+              <li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-60">
+                <a href="#">تصنيفات</a>
+                <ul class="sub-menu">
+                  <li id="menu-item-63" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63">
+                    <a href="#">صحة</a></li>
+                  <li id="menu-item-64" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64">
+                    <a href="#">تاريخ</a></li>
+                  <li id="menu-item-65" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65">
+                    <a href="#">فيديو</a></li>
+                </ul>
+              </li>
+              <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="#">قواالب مدفوعة</a></li>
+              <li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="#/">قوالب وورد بريس</a></li>
+              <li id="menu-item-66" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66"><a href="#">شراء القالب</a></li>
             </ul>
-        </div>
-    </nav>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h3>Welcome Home {{username}}</h3>
-
-        </div>
+          </div>
+        </nav>
+      </div>
     </div>
+  </div>
 </div>
-
-<div class="container">
-    <div class="row" ng-repeat="article in articles">
-        <div class="col-md-12 well well-sm">
-            <h4>{{article.title}}</h4>
-            <p>{{article.post}}</p>
-            <button class="btn btn-sm btn-primary" type="submit" ng-click="editPost(article.$id)" data-target="#editModal" data-toggle="modal">Edit</button>
-            <button class="btn btn-sm btn-danger" type="submit"  ng-click="deleteCnf(article)" data-target="#deleteModal" data-toggle="modal">Delete</button>
+<div id="page" style="margin-bottom: 30px;" class="hfeed site">
+  <a class="skip-link screen-reader-text" href="#content">التجاوز الى المحتوى</a>
+  <header id="masthead" class="site-header" role="banner">
+    <div class="inner-wrapper clear">
+      <div class="navigation-content">
+        <button class="menu-toggle" title="القائمة">
+          <span class="screen-reader-text">القائمة</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="site-branding small-logo small-logo-active">
+          <a class="site-logo" href="index.html" title="قالب مجلة برو" rel="home">
+            <img src="assets/uploads/logo.png" width="181" alt="" style="margin-top: 16px;"
+                 class="no-grav header-image"/>
+          </a>
         </div>
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+          <div class="menu-%d8%a7%d9%84%d8%b1%d8%a6%d9%8a%d8%b3%d9%8a%d8%a9-container">
+            <ul id="primary-menu" class="menu">
+              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="/#!/welcome">الرئيسية</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="#">من نحن</a></li>
+
+              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="#">اتصل بنا</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div id="search-button" title="أيقونة البحث">
+          <i class="fa fa-search"></i>
+          <span class="screen-reader-text">أيقونة البحث</span>
+        </div>
+        <div id="header-social-icons">
+          <a href="#" target="_blank" class="fa fa-facebook"><span>فايس بوك</span></a>
+          <a href="#" target="_blank" class="fa fa-twitter"><span>تويتر</span></a>
+          <a href="#" target="_blank" class="fa fa-google-plus"><span>جوجل بلس</span></a>
+          <a href="#" target="_blank" class="fa fa-instagram"><span>انستاغرام</span></a>
+          <a href="#" target="_blank" class="fa fa-pinterest"><span>بنترست</span></a>
+          <a href="#" target="_blank" class="fa fa-youtube"><span>يوتيوب</span></a>
+        </div>
+        <div id="search-bar">
+          <form role="search" method="get" class="search-form" action="#">
+            <label>
+              <span class="screen-reader-text">البحث عن:</span>
+              <input type="search" class="search-field" placeholder="بحث &hellip;" value="" name="s"/>
+            </label>
+            <input type="submit" class="search-submit" value="بحث" />
+          </form>
+        </div>
+      </div>
     </div>
-</div>
+  </header>
 
-<div class="container">
-    <div id="editModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4>Edit Post Details</h4>
-                </div>
-                <div class="modal-body">
-                    <form role="form">
-                        <div class="form-group">
-                            <label for="title">Title</label>
-                            <input type="text" name="title" id="title" class="form-control" ng-model="editPostData.title">
-                        </div>
-                        <div class="form-group">
-                            <label for="post">Post</label>
-                            <textarea name="post" id="post" class="form-control" ng-model="editPostData.post"></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn-sm" ng-click="updatePost(editPostData.$id)">Update Post</button>
-                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
-                </div>
 
+
+
+    <div id="content" class="site-content">
+      <div id="featured-post" class="clear" ng-repeat="article in articles" data-ng-if="article.featured == 'true'">
+        <article id="post-9" class="featured-post clear post-9 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-5 tag-6 tag-8 tag-7">
+          <a href="/#!/post/{{article.id}}" rel="bookmark">
+            <div class="img-box">
+              <figure class="feat-entry-thumbnail">
+                <img ng-src="{{article.pic}}" alt="أخطاء التفكير القاتلة التي يجب أن ننتبه لها" />
+              </figure>
+              <noscript>
+                  <figure class="entry-thumbnail"><img width="660" height="400" ng-src="{{article.pic}}" class="attachment-post-thumb size-post-thumb wp-post-image" alt=""/></figure>
+              </noscript>
+              <div class="featured-tri">
+                <span class="tri"></span>
+              </div>
             </div>
-        </div>
-    </div>
-</div>
-
-    <div class="container">
-        <div id="deleteModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-
-                    </div>
-                    <div class="modal-body">
-                        <p>Are you sure you want to delete this post?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger btn-sm" ng-click="deletePost(deleteArticle)">Delete Post</button>
-                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
+            <div class="content-box">
+              <h2 class="entry-title">{{article.title}}</h2>
+              <p>التفكير هو الوظيفة الأساسية لـعقل الإنسان، وهو الوسيلة التي يستخدمها من أجل إبداع الحلول وتطوير نمط الحياة التي يعيشها . كما أنّ التفكير هو الوسيلة لحل المشكلات الصغيرة التي تواجهنا في حياتنا اليومية ،...</p>
             </div>
+          </a>
+        </article>
+      </div>
+      <div class="inner-wrapper clear">
+        <div id="primary" class="content-area">
+          <main id="main" class="site-main clear" role="main">
+            <div class="categories-boxes clear">
+              <div id="widget_posts_home_list_2c-2" class="widget widget_widget_posts_home_list_2c clear">
+                <h3 class="home-widget-title">مقالات تقنية</h3>
+                <div>
+                  <article id="post-43" class="twocol post-43 post type-post status-publish format-image has-post-thumbnail hentry category-5 tag-8 post_format-post-format-image" ng-repeat="article in articles">
+                    <a href="/#!/post/{{article.id}}" rel="bookmark">
+                      <div class="img-box">
+                        <figure class="entry-thumbnail">
+                          <img ng-src="{{article.pic}}" alt="تشريد الذهن: كيف تتغلب عليه وتقوي قدرات التركيز لديك أثناء العمل؟!" />
+                        </figure>
+                        <noscript>
+                            <figure class="entry-thumbnail"><img width="400" height="242" ng-src="{{article.pic}}" class="attachment-medium-thumb size-medium-thumb wp-post-image" alt=""/>
+                            </figure>
+                        </noscript>
+                      </div>
+                      <div class="content-box">
+                        <div class="col-md-10 col-md-offset-1">
+                          <div class="entry-meta clear">
+                            <span class="byline"><i class="fa fa-user"></i>{{article.writer}}</span>|<span class="posted-on"><i class="fa fa-clock-o"></i><time class="entry-date published updated"> {{article.date}}</time></span>
+                          </div>
+                        </div>
+                        <h2 class="entry-title" style="text-align: center;">{{article.title}}</h2>
+                      </div>
+                    </a>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </main>
         </div>
+        <div id="secondary" class="widget-area clear" role="complementary">
+          <aside id="social-widget-3" class="widget widget_social-widget">
+            <span class="title-bg"><h3 class="widget-title">تجدنا أيضا هنا !</h3></span>
+            <div id="social-icons">
+            <a href="#" target="_blank" class="fa fa-facebook"><span>فايس بوك</span></a>
+              <a href="#" target="_blank" class="fa fa-twitter"><span>تويتر</span></a>
+              <a href="#" target="_blank" class="fa fa-google-plus"><span>جوجل بلس</span></a>
+              <a href="#" target="_blank" class="fa fa-instagram"><span>انستاغرام</span></a
+              <a href="#" target="_blank" class="fa fa-pinterest"><span>بنترست</span></a>
+              <a href="#" target="_blank" class="fa fa-youtube"><span>يوتيوب</span></a>
+            </div>
+          </aside>
+          <aside id="widget_posts_list_small-3" class="widget widget_widget_posts_list_small">
+            <span class="title-bg"><h3 class="widget-title">مواضيع هامة</h3></span>
+            <ul>
+              <li>
+                <article id="post-27" class="post-27 post type-post status-publish format-standard has-post-thumbnail hentry category-2 tag-18 tag-17">
+                  <a href="#" class="clear" rel="bookmark">
+                    <figure class="entry-thumbnail">
+                      <img src="assets/uploads/sites/12/2015/07/100-free-pics-049-660x400.jpg" data-src="assets/uploads/sites/12/2015/07/d05d4d18093e0ce2c5d1c44dc2df90a6-270x164.jpg" alt="ماذا يحدث لجسم الإنسان عند البقاء لفترة طويلة بدون طعام أو ماء؟!" />
+                    </figure>
+                    <noscript>
+                      <figure class="entry-thumbnail"><img width="270" height="164"  src="assets/uploads/sites/12/2015/07/d05d4d18093e0ce2c5d1c44dc2df90a6-270x164.jpg" class="attachment-small-thumb size-small-thumb wp-post-image"  alt=""/>
+                      </figure>
+                    </noscript>
+                    <h2 class="entry-title">ماذا يحدث لجسم الإنسان عند البقاء لفترة طويلة بدون طعام أو
+                                        ماء؟!</h2>
+                  </a>
+                </article>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
     </div>
+  </div>
+  <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="inner-content">
+      <nav id="site-navigation" class="footer-navigation" role="navigation">
+        <div class="menu-%d8%a7%d9%84%d8%b1%d8%a6%d9%8a%d8%b3%d9%8a%d8%a9-container">
+          <ul id="secondary-menu" class="menu">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="/#!/welcome">الرئيسية</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="#">اتصل بنا</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div id="footer-widgets">
+        <div class="clear">
+          <div class="footer-widget">
+            <aside id="text-7" class="widget widget_text">
+              <h2 class="widget-title">Lipsum Lorem</h2>
+              <div class="textwidget">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </div>
+            </aside>
+          </div>
+          <div class="footer-widget">
+            <aside id="tag_cloud-2" class="widget widget_tag_cloud">
+              <h2 class="widget-title">أبرز
+                        المواضيع</h2>
+              <div class="tagcloud"><a href='#' class='tag-link-22 tag-link-position-1' title='موضوع واحد' style='font-size: 8pt;'>اخلاق</a>
+                <a href='#' class='tag-link-24 tag-link-position-2' title='موضوع واحد' style='font-size: 8pt;'>الحياة</a>
+                <a href='#' class='tag-link-13 tag-link-position-3' title='موضوع واحد' style='font-size: 8pt;'>العمل
+                                الحر</a>
+                <a href='#' class='tag-link-14 tag-link-position-4' title='موضوع واحد' style='font-size: 8pt;'>المال</a>
+                <a href='#' class='tag-link-25 tag-link-position-5' title='موضوع واحد' style='font-size: 8pt;'>الهام</a>
+                <a href='#' class='tag-link-6 tag-link-position-6' title='موضوع واحد' style='font-size: 8pt;'>ثقافة</a>
+                <a href='#' class='tag-link-8 tag-link-position-7' title='5 موضوعات' style='font-size: 22pt;'>سلايدر</a>
+                <a href='#' class='tag-link-18 tag-link-position-8' title='موضوع واحد' style='font-size: 8pt;'>سمنة</a>
+                <a href='#' class='tag-link-4 tag-link-position-9' title='موضوع واحد' style='font-size: 8pt;'>صحة</a>
+                <a href='#' class='tag-link-17 tag-link-position-10' title='موضوع واحد' style='font-size: 8pt;'>صخة</a>
+                <a href='#' class='tag-link-7 tag-link-position-11' title='موضوع واحد' style='font-size: 8pt;'>فكر</a>
+                <a href='#' class='tag-link-10 tag-link-position-12' title='موضوع واحد' style='font-size: 8pt;'>كتاب</a>
+              </div>
+            </aside>
+          </div>
+          <div class="footer-widget">
+            <aside id="nav_menu-2" class="widget widget_nav_menu">
+              <h2 class="widget-title">قائمة
+                        التصنيفات</h2>
+              <div class="menu-%d9%81%d9%88%d8%aa%d8%b1-container">
+                <ul class="menu">
 
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55" ng-repeat="category in categories">
+                    <a href="#">{{category.name}}</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <a href="#top" id="smoothup"><i class="fa fa-angle-up"></i></a>
+      <div class="site-info clear">
+        <div id="copyright">
+          &copy; 2017
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
 </body>
 </html>
